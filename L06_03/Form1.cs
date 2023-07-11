@@ -16,5 +16,29 @@ namespace L06_03
         {
             InitializeComponent();
         }
+        private void blackRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOut.ForeColor= Color.Black;
+        }
+
+        private void blueRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOut.ForeColor = Color.Blue;
+        }
+
+        private void redRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOut.ForeColor = Color.Red;
+        }
+
+        private void grayRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOut.BackColor = Color.Gray;
+        }
+
+        private void whiteRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOut.BackColor = Color.White;
+        }
     }
 }

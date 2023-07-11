@@ -30,13 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.textColorTabPage = new System.Windows.Forms.TabPage();
-            this.backColorTabPage = new System.Windows.Forms.TabPage();
-            this.lblOut = new System.Windows.Forms.Label();
-            this.blackRadioButton = new System.Windows.Forms.RadioButton();
-            this.blueRadioButton = new System.Windows.Forms.RadioButton();
             this.redRadioButton = new System.Windows.Forms.RadioButton();
-            this.grayRadioButton = new System.Windows.Forms.RadioButton();
+            this.blueRadioButton = new System.Windows.Forms.RadioButton();
+            this.blackRadioButton = new System.Windows.Forms.RadioButton();
+            this.backColorTabPage = new System.Windows.Forms.TabPage();
             this.whiteRadioButton = new System.Windows.Forms.RadioButton();
+            this.grayRadioButton = new System.Windows.Forms.RadioButton();
+            this.lblOut = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.textColorTabPage.SuspendLayout();
             this.backColorTabPage.SuspendLayout();
@@ -65,28 +65,29 @@
             this.textColorTabPage.Text = "Text Color";
             this.textColorTabPage.UseVisualStyleBackColor = true;
             // 
-            // backColorTabPage
+            // redRadioButton
             // 
-            this.backColorTabPage.Controls.Add(this.whiteRadioButton);
-            this.backColorTabPage.Controls.Add(this.grayRadioButton);
-            this.backColorTabPage.Location = new System.Drawing.Point(8, 39);
-            this.backColorTabPage.Name = "backColorTabPage";
-            this.backColorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.backColorTabPage.Size = new System.Drawing.Size(785, 53);
-            this.backColorTabPage.TabIndex = 1;
-            this.backColorTabPage.Text = "Background Color";
-            this.backColorTabPage.UseVisualStyleBackColor = true;
+            this.redRadioButton.AutoSize = true;
+            this.redRadioButton.Location = new System.Drawing.Point(271, 6);
+            this.redRadioButton.Name = "redRadioButton";
+            this.redRadioButton.Size = new System.Drawing.Size(82, 29);
+            this.redRadioButton.TabIndex = 2;
+            this.redRadioButton.TabStop = true;
+            this.redRadioButton.Text = "Red";
+            this.redRadioButton.UseVisualStyleBackColor = true;
+            this.redRadioButton.CheckedChanged += new System.EventHandler(this.redRadioButton_CheckedChanged);
             // 
-            // lblOut
+            // blueRadioButton
             // 
-            this.lblOut.BackColor = System.Drawing.Color.Gray;
-            this.lblOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOut.Location = new System.Drawing.Point(3, 95);
-            this.lblOut.Name = "lblOut";
-            this.lblOut.Size = new System.Drawing.Size(798, 352);
-            this.lblOut.TabIndex = 0;
-            this.lblOut.Text = "A simple app using TabControl";
-            this.lblOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.blueRadioButton.AutoSize = true;
+            this.blueRadioButton.Location = new System.Drawing.Point(155, 6);
+            this.blueRadioButton.Name = "blueRadioButton";
+            this.blueRadioButton.Size = new System.Drawing.Size(86, 29);
+            this.blueRadioButton.TabIndex = 1;
+            this.blueRadioButton.TabStop = true;
+            this.blueRadioButton.Text = "Blue";
+            this.blueRadioButton.UseVisualStyleBackColor = true;
+            this.blueRadioButton.CheckedChanged += new System.EventHandler(this.blueRadioButton_CheckedChanged);
             // 
             // blackRadioButton
             // 
@@ -99,28 +100,31 @@
             this.blackRadioButton.TabStop = true;
             this.blackRadioButton.Text = "Black";
             this.blackRadioButton.UseVisualStyleBackColor = true;
+            this.blackRadioButton.CheckedChanged += new System.EventHandler(this.blackRadioButton_CheckedChanged);
             // 
-            // blueRadioButton
+            // backColorTabPage
             // 
-            this.blueRadioButton.AutoSize = true;
-            this.blueRadioButton.Location = new System.Drawing.Point(155, 6);
-            this.blueRadioButton.Name = "blueRadioButton";
-            this.blueRadioButton.Size = new System.Drawing.Size(86, 29);
-            this.blueRadioButton.TabIndex = 1;
-            this.blueRadioButton.TabStop = true;
-            this.blueRadioButton.Text = "Blue";
-            this.blueRadioButton.UseVisualStyleBackColor = true;
+            this.backColorTabPage.Controls.Add(this.whiteRadioButton);
+            this.backColorTabPage.Controls.Add(this.grayRadioButton);
+            this.backColorTabPage.Location = new System.Drawing.Point(8, 39);
+            this.backColorTabPage.Name = "backColorTabPage";
+            this.backColorTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.backColorTabPage.Size = new System.Drawing.Size(785, 53);
+            this.backColorTabPage.TabIndex = 1;
+            this.backColorTabPage.Text = "Background Color";
+            this.backColorTabPage.UseVisualStyleBackColor = true;
             // 
-            // redRadioButton
+            // whiteRadioButton
             // 
-            this.redRadioButton.AutoSize = true;
-            this.redRadioButton.Location = new System.Drawing.Point(271, 6);
-            this.redRadioButton.Name = "redRadioButton";
-            this.redRadioButton.Size = new System.Drawing.Size(82, 29);
-            this.redRadioButton.TabIndex = 2;
-            this.redRadioButton.TabStop = true;
-            this.redRadioButton.Text = "Red";
-            this.redRadioButton.UseVisualStyleBackColor = true;
+            this.whiteRadioButton.AutoSize = true;
+            this.whiteRadioButton.Location = new System.Drawing.Point(138, 6);
+            this.whiteRadioButton.Name = "whiteRadioButton";
+            this.whiteRadioButton.Size = new System.Drawing.Size(98, 29);
+            this.whiteRadioButton.TabIndex = 1;
+            this.whiteRadioButton.TabStop = true;
+            this.whiteRadioButton.Text = "White";
+            this.whiteRadioButton.UseVisualStyleBackColor = true;
+            this.whiteRadioButton.CheckedChanged += new System.EventHandler(this.whiteRadioButton_CheckedChanged);
             // 
             // grayRadioButton
             // 
@@ -133,17 +137,18 @@
             this.grayRadioButton.TabStop = true;
             this.grayRadioButton.Text = "Gray";
             this.grayRadioButton.UseVisualStyleBackColor = true;
+            this.grayRadioButton.CheckedChanged += new System.EventHandler(this.grayRadioButton_CheckedChanged);
             // 
-            // whiteRadioButton
+            // lblOut
             // 
-            this.whiteRadioButton.AutoSize = true;
-            this.whiteRadioButton.Location = new System.Drawing.Point(138, 6);
-            this.whiteRadioButton.Name = "whiteRadioButton";
-            this.whiteRadioButton.Size = new System.Drawing.Size(98, 29);
-            this.whiteRadioButton.TabIndex = 1;
-            this.whiteRadioButton.TabStop = true;
-            this.whiteRadioButton.Text = "White";
-            this.whiteRadioButton.UseVisualStyleBackColor = true;
+            this.lblOut.BackColor = System.Drawing.Color.Gray;
+            this.lblOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOut.Location = new System.Drawing.Point(0, 95);
+            this.lblOut.Name = "lblOut";
+            this.lblOut.Size = new System.Drawing.Size(801, 362);
+            this.lblOut.TabIndex = 0;
+            this.lblOut.Text = "A simple app using TabControl";
+            this.lblOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
